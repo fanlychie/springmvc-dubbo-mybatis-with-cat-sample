@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+ <mapper namespace="org.fanlychie.facade.dao.ArticleDao">
+
+	<resultMap id="ArticleResultMap" type="org.fanlychie.entity.Article">
+		<id property="id" column="ID" />
+		<result property="userId" column="USER_ID" />
+		<result property="title" column="TITLE" />
+		<result property="summary" column="SUMMARY" />
+	</resultMap>
+
+	<insert id="save" useGeneratedKeys="true" keyProperty="id" parameterType="org.fanlychie.entity.Article">
+		INSERT INTO ARTICLE (
+			ID, USER_ID, TITLE, SUMMARY
+		) VALUES (
+			#{id}, #{userId}, #{title}, #{summary}
+		)
+	</insert>
+
+	<select id="queryByUserId" resultMap="ArticleResultMap">
+		SELECT * FROM ARTICLE WHERE USER_ID = #{USER_ID}
+	</select>
+
+</mapper>
