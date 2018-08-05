@@ -7,7 +7,6 @@
     <packaging>pom</packaging>
     <url>http://maven.apache.org</url>
     <modules>
-        <module>common/common-core</module>
         <module>common/common-config</module>
         <module>facade/facade-user</module>
         <module>facade/facade-article</module>
@@ -28,6 +27,7 @@
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <druid.version>1.0.28</druid.version>
         <cat-monitor.version>0.0.6</cat-monitor.version>
+        <cat-client-dubbo.version>1.0.0</cat-client-dubbo.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -45,11 +45,6 @@
     </repositories>
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.fanlychie</groupId>
-                <artifactId>common-core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.fanlychie</groupId>
                 <artifactId>common-config</artifactId>
@@ -143,6 +138,12 @@
                 <groupId>net.dubboclub</groupId>
                 <artifactId>cat-dubbo-monitor</artifactId>
                 <version>${cat-monitor.version}</version>
+            </dependency>
+            <!-- 客户端dubbo接入CAT -->
+            <dependency>
+                <groupId>org.fanlychie</groupId>
+                <artifactId>cat-client-dubbo</artifactId>
+                <version>${cat-client-dubbo.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

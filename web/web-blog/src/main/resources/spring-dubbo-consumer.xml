@@ -11,7 +11,7 @@
 
     <dubbo:registry protocol="zookeeper" address="${zookeeper.address}"/>
 
-    <dubbo:consumer timeout="5000" filter="DubboCatFilter"/>
+    <dubbo:consumer timeout="5000" filter="CatClientFilter"/>
 
     <dubbo:reference id="userFacade" interface="org.fanlychie.facade.UserFacade" check="false"/>
 
