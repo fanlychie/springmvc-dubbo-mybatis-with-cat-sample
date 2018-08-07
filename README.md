@@ -14,6 +14,12 @@
 
 ---
 
+数据库脚本：
+
+springmvc-dubbo-mybatis-with-cat-sample/cat_demo_schema.sql
+
+---
+
 项目运行方式：
 
 ![](https://raw.githubusercontent.com/fanlychie/mdimg/master/cat-sample-service-article.png)
@@ -21,3 +27,9 @@
 ![](https://raw.githubusercontent.com/fanlychie/mdimg/master/cat-sample-service-user.png)
 
 ![](https://raw.githubusercontent.com/fanlychie/mdimg/master/cat-sample-web-blog.png)
+
+---
+
+访问地址：
+
+http://localhost:8080/blog/user/login?username=admin&password=admin
